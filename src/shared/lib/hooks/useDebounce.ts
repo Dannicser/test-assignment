@@ -1,15 +1,17 @@
-import { MutableRefObject, useRef } from "react";
+import { MutableRefObject, useRef } from 'react'
 
+/* eslint-disable */
 export function useDebounce(callback: any, delay: number) {
-  const timer = useRef(null) as MutableRefObject<any>;
+    /* eslint-disable */
+    const timer = useRef(null) as MutableRefObject<any>
 
-  return function () {
-    if (timer.current) {
-      clearTimeout(timer.current);
+    return function (): void {
+        if (timer.current) {
+            clearTimeout(timer.current)
+        }
+
+        timer.current = setTimeout(() => {
+            callback()
+        }, delay)
     }
-
-    timer.current = setTimeout(() => {
-      callback();
-    }, delay);
-  };
 }
