@@ -1,11 +1,14 @@
 .SearchForm {
   position: relative;
+
   width: 300px;
 }
 
 .list_container {
   position: absolute;
-  background-color: white;
   z-index: 2;
+
   width: 100%;
+
+  background-color: white;
 }
