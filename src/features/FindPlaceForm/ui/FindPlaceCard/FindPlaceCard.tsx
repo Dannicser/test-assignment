@@ -8,7 +8,7 @@ interface IFindPlaceCardProps extends IFeature {
 
 export const FindPlaceCard: React.FC<IFindPlaceCardProps> = (props) => {
     return (
-        <div className={`${styles.FindPlaceCard} ${props.className}}`}>
+        <div className={`${styles.FindPlaceCard}`}>
             <span>{props?.id}</span> <span>{props?.place_name}</span>
         </div>
     )

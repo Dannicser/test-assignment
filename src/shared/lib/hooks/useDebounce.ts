@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef } from 'react'
 
 /* eslint-disable */
 export function useDebounce(callback: any, delay: number) {
