@@ -1,4 +1,4 @@
-import styles from './List.module.css';
+import styles from './List.module.css'
 
 interface IListProps {
     className?: string
@@ -12,5 +12,5 @@ export const List: React.FC<IListProps> = ({ className = '', children, notFound 
             {notFound ? <ul className={styles.notFound}>Not Found</ul> : null}
             {children}
         </li>
-    );
-};
+    )
+}

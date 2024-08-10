@@ -1,21 +1,21 @@
 .Input {
-  position: relative;
+    position: relative;
 
-  display: flex;
+    display: flex;
 }
 
 .input {
-  width: 100%;
-  height: 30px;
-  padding: 5px 30px 5px 10px;
+    width: 100%;
+    height: 30px;
+    padding: 5px 30px 5px 10px;
 
-  outline: none;
+    outline: none;
 }
 
 .loader {
-  position: absolute;
-  top: 50%;
-  left: 95%;
+    position: absolute;
+    top: 50%;
+    left: 95%;
 
-  transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }

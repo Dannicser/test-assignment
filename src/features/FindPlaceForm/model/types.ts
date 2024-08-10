@@ -1,8 +1,8 @@
 export interface IFindPlaceRes {
-  features: IFeature[];
+    features: IFeature[]
 }
 
 export interface IFeature {
-  id?: string;
-  place_name?: string;
+    id?: string
+    place_name?: string
 }

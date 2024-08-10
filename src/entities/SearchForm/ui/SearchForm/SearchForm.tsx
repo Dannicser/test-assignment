@@ -1,8 +1,8 @@
-import { IFeature } from '../../../../features/FindPlaceForm/model/types';
-import { Input, List } from '../../../../shared/ui';
-import { SearchList } from '../SearchList/SearchList';
+import { IFeature } from '../../../../features/FindPlaceForm/model/types'
+import { Input, List } from '../../../../shared/ui'
+import { SearchList } from '../SearchList/SearchList'
 
-import styles from './SearchForm.module.css';
+import styles from './SearchForm.module.css'
 
 interface ISearchFormProps {
     className?: string
@@ -13,14 +13,15 @@ interface ISearchFormProps {
     onChangeFocus?: (isFocused: boolean) => void
     chosePlace?: (place: IFeature) => void
     value?: string
+    chosenId?: string
 }
 
 export const SearchForm: React.FC<ISearchFormProps> = (props) => {
-    const { className = '', items, isLoading, onChange, value, isFocused, onChangeFocus, chosePlace } = props;
+    const { className = '', items, isLoading, onChange, value, chosenId, isFocused, onChangeFocus, chosePlace } = props
 
     const onChangeFocusHandler = (focus: boolean) => {
-        onChangeFocus?.(focus);
-    };
+        onChangeFocus?.(focus)
+    }
 
     return (
         <div className={`${styles.SearchForm} ${className}`}>
@@ -31,10 +32,10 @@ export const SearchForm: React.FC<ISearchFormProps> = (props) => {
             <div className={`${styles.list_container}`} onClick={() => onChangeFocusHandler(false)}>
                 {isFocused && value?.length && !isLoading ? (
                     <List notFound={!isLoading && !items?.length}>
-                        <SearchList chosePlace={chosePlace} items={items} />
+                        <SearchList chosenId={chosenId} chosePlace={chosePlace} items={items} searchValue={value} />
                     </List>
                 ) : null}
             </div>
         </div>
-    );
-};
+    )
+}

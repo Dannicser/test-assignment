@@ -1,3 +1,11 @@
 .SearchList {
-  cursor: pointer;
+    cursor: pointer;
+}
+
+.active {
+    background-color: rgb(235, 232, 232);
+}
+
+.highlight {
+    background-color: yellow;
 }

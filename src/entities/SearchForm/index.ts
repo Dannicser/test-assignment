@@ -1,2 +1,2 @@
-import { SearchForm } from "./ui/SearchForm/SearchForm";
-export { SearchForm };
+import { SearchForm } from './ui/SearchForm/SearchForm'
+export { SearchForm }

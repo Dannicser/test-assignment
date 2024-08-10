@@ -1,9 +1,8 @@
-import { MutableRefObject, useRef } from 'react'
+import { useRef } from 'react';
 
 /* eslint-disable */
 export function useDebounce(callback: any, delay: number) {
-    /* eslint-disable */
-    const timer = useRef(null) as MutableRefObject<any>
+    const timer = useRef<ReturnType<typeof setTimeout>>()
 
     return function (): void {
         if (timer.current) {
